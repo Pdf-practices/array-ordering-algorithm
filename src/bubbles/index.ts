@@ -1,5 +1,5 @@
-const OrderByBubbles = (arrayDisordered: Array<number>) => {
-   let tempArray = arrayDisordered;
+const OrderByBubbles = (disorderedArray: Array<number>) => {
+   let tempArray = disorderedArray;
    let reorder = false;
 
    tempArray.forEach((val: number, key: number) => {

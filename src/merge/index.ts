@@ -1,14 +1,26 @@
-function merge(left: any, right: any) {
-    let arr = []
+const mergeSort = (arr: Array<number>): Array<number> => {
+  if (arr.length < 2) {
+    return arr;
+  }
 
-    while (left.length && right.length) {
+  const middle = parseInt(`${arr.length / 2}`) | 0;
+  const left = arr.slice(0, middle);
+  const rigth = arr.slice(middle);
 
-        if (left[0] < right[0]) {
-            arr.push(left.shift())  
-        } else {
-            arr.push(right.shift()) 
-        }
+  const merge = (left: any, rigth: any) => {
+    const result = [];
+    let il, ir;
+    il = 0;
+    ir = 0;
+
+    while (il < left.length && ir < rigth.length) {
+      result.push(left[il] < rigth[ir] ? left[il++] : rigth[ir++]);
     }
-    
-    return [ ...arr, ...left, ...right ]
-}
+
+    return [...result, ...left.slice(il), ...rigth.slice(ir)];
+  };
+
+  return merge(mergeSort(left), mergeSort(rigth));
+};
+
+export default mergeSort;

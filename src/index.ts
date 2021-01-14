@@ -1,8 +1,10 @@
 import OrderByBubbles from "./bubbles/index";
 import OrderingByInseercion from "./insertion";
 import mergeSort from "./merge";
+import selectionSort from "./selection";
 
 function main() {
+  const arr = [12, 45, 1, 890];
   /**
    * Sorting with the bubble algorithm
    */
@@ -18,10 +20,15 @@ function main() {
   /**
    * Sorting with the merge algorithm
    */
-  const arr = [45, 5, 2, 0, 23, 4, 54, 76, 3, 293, 100, 41];
+  // let MergeSort = mergeSort(arr);
+  // console.log(MergeSort);
 
-  let MergeSort = mergeSort(arr);
-  console.log(MergeSort);
+  /**
+   *
+   * Sorting with the selection algorithm
+   */
+  let SelectionSort = selectionSort(arr);
+  console.log(SelectionSort);
 }
 
 main();

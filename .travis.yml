@@ -1,0 +1,4 @@
+language: typescript
+rvm:
+  - 4.1.2
+  - tsc

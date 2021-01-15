@@ -1,7 +1,14 @@
 import selectionSort from "../src/selection";
+import shellSort from "../src/shell";
 
 describe("Algoritmos de Busqueda", () => {
-  it("Selectio Sort", () => {
-    expect(selectionSort()).toEqual([1, 12, 45, 890]);
+  const arr = [12, 45, 1, 890];
+
+  it("Selection Sort", () => {
+    expect(selectionSort(arr)).toEqual([1, 12, 45, 890]);
+  });
+
+  it("Shell Sort", () => {
+    expect(shellSort(arr)).toEqual([1, 12, 45, 890]);
   });
 });

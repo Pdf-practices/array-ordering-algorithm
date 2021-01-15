@@ -2,6 +2,7 @@ import OrderByBubbles from "./bubbles/index";
 import OrderingByInseercion from "./insertion";
 import mergeSort from "./merge";
 import selectionSort from "./selection";
+import shellSort from "./shell";
 
 function main() {
   const arr = [12, 45, 1, 890];
@@ -24,11 +25,16 @@ function main() {
   // console.log(MergeSort);
 
   /**
-   *
    * Sorting with the selection algorithm
    */
-  let SelectionSort = selectionSort(arr);
-  console.log(SelectionSort);
+  // let SelectionSort = selectionSort(arr);
+  // console.log(SelectionSort);
+
+  /**
+   * Sorting with the selection algorithm
+   */
+  let ShellSort = shellSort(arr);
+  console.log(ShellSort);
 }
 
 main();

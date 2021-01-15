@@ -1,17 +1,24 @@
 {
-   "name": "array-ordering-algorithm",
-   "version": "1.0.0",
-   "description": "",
-   "main": "src/index.ts",
-   "scripts": {
-      "tsc": "tsc",
-      "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
-      "test": "echo \"Error: no test specified\" && exit 1"
-   },
-   "author": "",
-   "license": "ISC",
-   "devDependencies": {
-      "ts-node-dev": "^1.1.1",
-      "typescript": "^4.1.3"
-   }
+  "name": "array-ordering-algorithm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "scripts": {
+    "tsc": "tsc",
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "test": "jest",
+    "test:w": "jest --watch",
+    "_comment test": "ts-node node_modules/jasmine/bin/jsmine --config=jasmine.json",
+    "_comment coverage": "nyc -r text -e .ts -x\"tests/*.test.ts\" npm run test"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^26.0.20",
+    "jest": "^26.6.3",
+    "ts-jest": "^26.4.4",
+    "ts-node": "^9.1.1",
+    "ts-node-dev": "^1.1.1",
+    "typescript": "^4.1.3"
+  }
 }
